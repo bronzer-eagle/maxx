@@ -1,0 +1,284 @@
+@font-face {
+  src: url('fonts/Ubuntu_Condensed/UbuntuCondensed-Regular.ttf');
+  font-family: "UbuntuCondensed";
+}
+body {
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "UbuntuCondensed";
+  font-size: 16px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+
+#templates {
+  display: none;
+}
+
+/*------------------------*/
+
+.left-side {
+  top: 0;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: #1a4387;
+}
+.left-side a {
+  color: white;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.375em;
+  background: none;
+  line-height: 1.7em;
+  margin-left: 20px;
+}
+
+.left-side ul{
+  margin-top: 0;
+}
+
+.left-side li {
+  border-left: 10px solid transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 240px;
+  height: 40px;
+}
+
+.left-side li.active {
+  border-left: 10px solid white;
+  background: #1c3282;
+}
+
+
+/*-------------------*/
+
+#rightSide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background: rgb(94, 114, 214);
+  height: 100%;
+}
+
+/*------------------*/
+
+#wrapper {
+  top: 0;
+  position: relative;
+  left: 260px;
+  width: 730px;
+  margin: 0;
+}
+
+#wrapper article {
+  height: 500px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px ridge rgb(214, 214, 214);
+  margin-bottom: 10px;
+}
+
+#wrapper article .mainInf{
+  margin-left: 20px;
+  padding: 0 0 0 20px;
+  border-left: 1px ridge rgb(214, 214, 214);
+}
+
+#wrapper article .mainInf #state{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: rgb(87, 79, 221);
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+#wrapper article .mainInf h1#name {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#wrapper article .mainInf #status{
+  margin-left: 20px;
+  color: rgb(161, 161, 161);
+}
+#wrapper article .mainInf ul li {
+  margin: 20px 5px;
+}
+#wrapper article .mainInf ul li a {
+  color: rgb(77, 114, 153);
+}
+#wrapper article .mainInf ul li span:not(.inf) {
+  display: inline-block;
+  width: 60px;
+}
+#wrapper article .mainInf ul li span.inf {
+  display: inline-block;
+  width: 200px;
+  margin-left: 20px;
+  color: rgb(77, 114, 153);
+}
+#wrapper article .mainInf ul li i {
+  display: inline-block;
+  width: 20px;
+  margin-right: 10px;
+}
+#wrapper article .mainPhoto {
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  border: 5px solid white;
+  overflow: hidden;
+  box-shadow: 0 0 3px 1px rgb(195, 195, 195);
+}
+#wrapper article .mainPhoto #mainPhoto {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper article .education div{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#wrapper article .education div span{
+  width: 200px;
+}
+
+#wrapper article .education div span small{
+  font-size: .8em;
+}
+
+#wrapper article .education div span small a{
+  color: rgb(58, 88, 164);
+}
+
+#wrapper article .education div>div{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 1px 1px rgb(189, 189, 189);
+}
+
+#wrapper article .education img{
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper article .education i{
+  margin-right: 5px;
+  color: rgb(58, 88, 164);
+}
+
+#wrapper section{
+  min-height: 300px;
+  height: auto;
+  /*border: 1px solid black;*/
+}
+
+#wrapper section .comments{
+  width: 350px;
+  height: 160px;
+  background: rgb(217, 227, 238);
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#wrapper section .comments>div{
+  padding: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(161, 168, 219);
+}
+
+#wrapper section .comments div span{
+  font-size: .8em;
+  color: rgb(43, 84, 153);
+}
+
+#wrapper section .comments textarea{
+  text-align: left;
+  display: block;
+  width: 320px;
+  max-width: 320px;
+  max-height: 50px;
+  padding: 5px;
+  height: 50px;
+  margin: 10px auto;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+#wrapper section .comments button{
+  margin: 5px 10px;
+  background: rgb(110, 153, 196);
+  color: white;
+  border: none;
+  outline: none;
+  height: 25px;
+  width: 120px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+#wrapper section .comments button:active{
+  padding-top: 3px;
+  background: rgb(95, 134, 173);
+}
+
+#wrapper section form>div{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#wrapper section .Limage{
+  position: relative;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#wrapper section .Limage i{
+  top: 0;
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+  color: rgb(110, 153, 196);
+}
+
+#wrapper section #Limage{
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  background: none;
+  height: 100%;
+  width: 100%;
+}
