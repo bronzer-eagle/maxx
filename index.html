@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cupcake</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- leftside menu -->
+  <div class="left-side">
+    <ul>
+      <li class="active" onclick="makeActive(this)">
+        <a href="#myPage">My page</a>
+      </li>
+      <li onclick="makeActive(this)">
+        <a href="#myFriends">My friends</a>
+      </li>
+      <li onclick="makeActive(this)">
+        <a href="#">My photos</a>
+      </li>
+      <li onclick="makeActive(this)">
+        <a href="#">My music</a>
+      </li>
+      <li onclick="makeActive(this)">
+        <a href="#">My videos</a>
+      </li>
+      <li onclick="makeActive(this)">
+        <a href="#">Configuration</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Main container for the inf -->
+  <div id="wrapper"></div>
+  <!-- News container -->
+  <div id='rightSide'></div>
+
+
+  <!-- templates -->
+  <div id='templates'>
+    <div id='myPage'>
+      <article>
+        <div class="mainPhoto">
+          <img id='mainPhoto' src="img/o12S9j9oevs.png">
+        </div>
+        <div class="mainInf">
+          <h1 id="name">Alexander Bondarenko </h1>
+          <div id="state"></div>
+          <br>
+          <span id='status'>Veni. Vidi. Vici.</span>
+          <ul>
+            <li>
+              <i class="fa fa-home"></i> <span>City:</span> <span id='city' class="inf">Kyiv</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i> <span>E-mail:</span>
+              <span class="inf">
+                  <a id="mail" href="malito:bronzer2010@gmail.com">
+                    bronzer2010@gmail.com
+                  </a>
+                </span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i> <span>Phone:</span>
+              <span class="inf">
+                    <a id='tel' href="tel:+380962451992">+380962451992</a>
+                </span>
+            </li>
+            <li>
+              <i class="fa fa-birthday-cake"></i> <span>Birthday:</span> <span id='birthday' class="inf">9 january 1996</span>
+            </li>
+            <li>
+              <i class="fa fa-briefcase"></i> <span>Work:</span> <span id='work' class="inf">Glukhov inc.</span>
+            </li>
+          </ul>
+          <div class="education">
+            <h3>Education:</h3>
+            <div id="school">
+              <div>
+                <img id='sch-img' src="img/566.jpg">
+              </div>
+              <span id='sch-inf'>
+                Kryvoryzka Ternivska Gymnasium
+                <small>
+                  <q><em>Шукай собі долю, а гімназії славу</em></q><br>
+                  <i class="fa fa-info-circle"></i><a href="https://sites.google.com/site/krivoyrogktg/">Перейти до сайту</a>
+                </small>
+              </span>
+            </div>
+            <div id='university'>
+              <div>
+                <img id='un-img' src="img/nau.jpg">
+              </div>
+              <span id='un-inf'>National aviation university<br>
+              <small>
+                <q><em>Сессия близко</em></q><br>
+                <i class="fa fa-info-circle"></i><a href="https://nau.edu.ua">nau.edu.ua</a>
+              </small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </article>
+      <section>
+        <div class="comments">
+          <div>
+            <span>Make a comment</span>
+            <span>Amount of comments: <span id='amount'>3</span></span>
+          </div>
+          <form id='commentForm' method="" onkeypress="">
+            <textarea id="comment" oninput="changeTextArea(this.value)"
+            onfocus="showPhoto()" onblur="checkArea(this.value)"></textarea>
+            <div>
+            <button>Comment</button>
+            <div class="Limage">
+              <i class="fa fa-camera"></i>
+              <input type="file" id='Limage'>
+            </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="showComment">
+          <div id='mainPhComm'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentChg'></span>
+        </div>
+
+      </section>
+    </div>
+    <div id='myFriends'>
+      <article>
+        friends
+
+      </article>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
