@@ -14,6 +14,9 @@ function loadPage() {
   } else {
     document.getElementById('wrapper').innerHTML = '';
   }
+  if (hash == 'myPage'){
+    getFriendsNews();
+  }
 }
 
 function makeActive(li) {
@@ -45,4 +48,10 @@ function checkArea(val) {
   if (!val){
     document.getElementById('mainPhComm').style.display = 'none';
   }
+}
+
+function getFriendsNews() {
+  var news = document.getElementById('rightSideComents').innerHTML;
+  var rightSide = document.getElementById('rightSide');
+  rightSide.innerHTML = news;
 }

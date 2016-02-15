@@ -22,6 +22,8 @@ a {
   display: none;
 }
 
+::-webkit-file-upload-button { cursor:pointer; }
+
 /*------------------------*/
 
 .left-side {
@@ -75,6 +77,11 @@ a {
   width: 300px;
   background: rgb(34, 55, 162);
   height: 100%;
+  overflow-y: scroll;
+}
+
+#rightSide::-webkit-scrollbar {
+  width: 0;
 }
 
 /*------------------*/
@@ -142,8 +149,37 @@ a {
   width: 20px;
   margin-right: 10px;
 }
+
+#wrapper article .photoInf{
+  height: auto;
+  width: 220px;
+  text-align: center;
+}
+
+#wrapper article .photoInf .changePhoto{
+  width: 160px;
+  height: 25px;
+  padding: 5px;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+  background: rgb(165, 195, 227);
+  margin: 20px auto;
+  color: rgb(32, 68, 131);
+  border-radius: 3px;
+}
+
+#wrapper article .photoInf .changePhoto input{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #wrapper article .mainPhoto {
-  margin: 10px;
+  margin: 10px auto;
   width: 200px;
   height: 300px;
   border: 5px solid white;
@@ -194,8 +230,7 @@ a {
 }
 
 #wrapper section{
-  min-height: 300px;
-  height: auto;
+  height: 200px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -290,7 +325,7 @@ a {
   width: 100%;
 }
 
-#wrapper section .showComment{
+#wrapper .showComment, #rightSide .showComment{
   width: 330px;
   height: 140px;
   padding: 10px;
@@ -300,12 +335,12 @@ a {
   overflow: hidden;
 }
 
-#wrapper section .showComment img{
+#wrapper .showComment img, #rightSide .showComment img{
   width: 100%;
   height: 100%;
 }
 
-#wrapper section .showComment div{
+#wrapper .showComment div, #rightSide .showComment div{
   display: none;
   width: 50px;
   height: 50px;
@@ -314,4 +349,53 @@ a {
   margin: 0 5px 5px 0;
   float: left;
   box-shadow: 0 0 1px 1px rgb(189, 189, 189);
+}
+
+#wrapper .showComment img#commentImg, #rightSide .showComment img#commentImg{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+#wrapper  .commentBox {
+  width: 100%;
+  height: auto;
+}
+
+#wrapper .commentBox .showComment{
+  margin: 10px auto;
+  height: auto;
+}
+
+#wrapper .commentBox .showComment div, #rightSide .showComment div{
+  display: block;
+}
+
+#wrapper .commentBox  .showComment>div.addImg, #rightSide .showComment>div.addImg{
+  float: none;
+  margin: 10px auto;
+  border-radius: 0;
+  min-width: 100px;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+}
+
+#wrapper .commentBox  .showComment>div.addImg>img, #rightSide .showComment>div.addImg>img{
+  display: block;
+}
+
+
+#rightSide .friendComment .showComment{
+  width: 260px;
+  height: auto;
+  margin: 10px auto;
+  background: rgb(25, 45, 107);
+  border: none;
+  box-shadow: none;
+  color: white;
+}
+
+#rightSide .friendComment .showComment div{
+  box-shadow: none;
 }

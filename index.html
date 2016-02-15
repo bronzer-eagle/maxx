@@ -42,8 +42,14 @@
   <div id='templates'>
     <div id='myPage'>
       <article>
-        <div class="mainPhoto">
-          <img id='mainPhoto' src="img/o12S9j9oevs.png">
+        <div class="photoInf">
+          <div class="mainPhoto">
+            <img id='mainPhoto' src="img/o12S9j9oevs.png">
+          </div>
+          <div class="changePhoto">
+            <i class="fa fa-file"></i> Change a photo!
+            <input type="file" id='changeImg'>
+          </div>
         </div>
         <div class="mainInf">
           <h1 id="name">Alexander Bondarenko </h1>
@@ -109,15 +115,14 @@
             <span>Make a comment</span>
             <span>Amount of comments: <span id='amount'>3</span></span>
           </div>
-          <form id='commentForm' method="" onkeypress="">
-            <textarea id="comment" oninput="changeTextArea(this.value)"
-            onfocus="showPhoto()" onblur="checkArea(this.value)"></textarea>
+          <form id='commentForm' method="post" action="/">
+            <textarea id="comment" oninput="changeTextArea(this.value)" onfocus="showPhoto()" onblur="checkArea(this.value)"></textarea>
             <div>
-            <button>Comment</button>
-            <div class="Limage">
-              <i class="fa fa-camera"></i>
-              <input type="file" id='Limage'>
-            </div>
+              <button>Comment</button>
+              <div class="Limage">
+                <i class="fa fa-camera"></i>
+                <input type="file" id='Limage'>
+              </div>
             </div>
           </form>
         </div>
@@ -127,9 +132,44 @@
             <img src="img/o12S9j9oevs.png">
           </div>
           <span id='commentChg'></span>
+          <!-- <img id='commentImg' src="" class='addImg'> -->
         </div>
 
       </section>
+      <div class="commentBox">
+
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentSpan'>Hello my name is Alex))</span>
+          <div class="addImg">
+            <img id='addImg' src="img/o12S9j9oevs.png">
+          </div>
+        </div>
+
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentSpan'>I've studied at KTG for 11 years!</span>
+          <div class="addImg">
+            <img id='addImg' src="img/566.jpg">
+          </div>
+        </div>
+
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentSpan'>Nowadays I study at NAU</span>
+          <div class="addImg">
+            <img id='addImg' src="img/nau.jpg">
+          </div>
+        </div>
+
+      </div>
+
     </div>
     <div id='myFriends'>
       <article>
@@ -137,6 +177,74 @@
 
       </article>
     </div>
+
+    <div id='rightSideComents'>
+      <div class="friendComment">
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentSpan'>Nowadays I study at NAU</span>
+          <div class="addImg">
+            <img id='addImg' src="img/nau.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="friendComment">
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/maxx.jpg">
+          </div>
+          <span id='commentSpan'>Hello I'm MAxx</span>
+        </div>
+      </div>
+
+      <div class="friendComment">
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentSpan'>Nowadays I study at NAU</span>
+          <div class="addImg">
+            <img id='addImg' src="img/nau.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="friendComment">
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/maxx.jpg">
+          </div>
+          <span id='commentSpan'>Hello I'm MAxx</span>
+        </div>
+      </div>
+
+      <div class="friendComment">
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/o12S9j9oevs.png">
+          </div>
+          <span id='commentSpan'>Nowadays I study at NAU</span>
+          <div class="addImg">
+            <img id='addImg' src="img/nau.jpg">
+          </div>
+        </div>
+      </div>
+
+      <div class="friendComment">
+        <div class="showComment">
+          <div id='userPhoto'>
+            <img src="img/maxx.jpg">
+          </div>
+          <span id='commentSpan'>Hello I'm MAxx</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
   </div>
   <script src="main.js"></script>
 </body>
