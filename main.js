@@ -14,9 +14,7 @@ function loadPage() {
   } else {
     document.getElementById('wrapper').innerHTML = '';
   }
-  if (hash == 'myPage'){
     getFriendsNews();
-  }
 }
 
 function makeActive(li) {
