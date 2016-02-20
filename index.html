@@ -24,7 +24,7 @@
         <a href="#myFriends">My friends</a>
       </li>
       <li onclick="makeActive(this)">
-        <a href="#">My photos</a>
+        <a href="#myPhoto">My photos</a>
       </li>
       <li onclick="makeActive(this)">
         <a href="#">My music</a>
@@ -38,9 +38,11 @@
     </ul>
   </div>
 
-  <div id="wrapper"></div> <!-- Main container for the inf -->
+  <div id="wrapper"></div>
+  <!-- Main container for the inf -->
 
-  <div id='rightSide'></div>  <!-- News container -->
+  <div id='rightSide'></div>
+  <!-- News container -->
 
   <!-- templates -->
   <div id='templates'>
@@ -50,7 +52,7 @@
       <!-- main information and photo -->
       <article>
 
-          <!-- photo -->
+        <!-- photo -->
         <div class="photoInf">
 
           <div class="mainPhoto">
@@ -64,13 +66,13 @@
 
         </div>
 
-<!-- user inf. -->
+        <!-- user inf. -->
 
         <div class="mainInf">
           <h1 id="name">Alexander Bondarenko </h1>
-          <div id="state"></div>
+          <div class="state"></div>
           <br>
-          <span id='status'>Veni. Vidi. Vici.</span>
+          <span class='status'>Veni. Vidi. Vici.</span>
           <ul>
             <li>
               <i class="fa fa-home"></i> <span>City:</span> <span id='city' class="inf">Kyiv</span>
@@ -126,7 +128,7 @@
 
       </article>
 
-<!-- write a comment -->
+      <!-- write a comment -->
 
       <section>
         <div class="comments">
@@ -134,10 +136,10 @@
             <span>Make a comment</span>
             <span>Amount of comments: <span id='amount'>3</span></span>
           </div>
-          <form id='commentForm' method="post" action="/">
+          <form id='commentForm'>
             <textarea id="comment" oninput="changeTextArea(this.value)" onfocus="showPhoto()" onblur="checkArea(this.value)"></textarea>
             <div>
-              <button>Comment</button>
+              <button onclick="addComment();return false;">Comment</button>
               <div class="Limage">
                 <i class="fa fa-camera"></i>
                 <input type="file" id='Limage'>
@@ -156,7 +158,7 @@
 
       </section>
 
-<!-- user's comments -->
+      <!-- user's comments -->
       <div class="commentBox">
 
         <div class="showComment">
@@ -193,15 +195,140 @@
 
     </div>
 
-<!-- friends -->
+    <!-- friends -->
     <div id='myFriends'>
-      <article>
-        friends
+      <!-- friend #1 -->
+      <article class="friends">
+        <div class="myfriends">
+          <div class="friendPhoto">
+            <img src='img/maxx.jpg'>
+          </div>
+          <div class="friendInf">
+            <span class="friendName">Maxx Seredenko</span>
+            <div class="state"></div>
+            <br>
+            <span class="status">'python is the best'</span>
+            <br>
+            <div class="friendState">Best friend</div>
+            <br>
+          </div>
+          <button class="sendMessage" onclick="openChat()">Send message</button>
+        </div>
+
+        <!-- friend #2 -->
+        <div class="myfriends">
+          <div class="friendPhoto">
+            <img src='img/hulk.jpg'>
+          </div>
+          <div class="friendInf">
+            <span class="friendName">Dodick Dodicovitch</span>
+            <div class="state"></div>
+            <br>
+            <span class="status">'mestniy doda'</span>
+            <br>
+            <div class="friendState">School friend</div>
+            <br>
+          </div>
+          <button class="sendMessage" onclick="openChat()">Send message</button>
+        </div>
+
+        <div class="myfriends">
+          <div class="friendPhoto">
+            <img src='img/hulk.jpg'>
+          </div>
+          <div class="friendInf">
+            <span class="friendName">Dodick Dodicovitch</span>
+            <div class="state"></div>
+            <br>
+            <span class="status">'mestniy doda'</span>
+            <br>
+            <div class="friendState">School friend</div>
+            <br>
+          </div>
+          <button class="sendMessage" onclick="openChat()">Send message</button>
+        </div>
+
+        <div class="myfriends">
+          <div class="friendPhoto">
+            <img src='img/hulk.jpg'>
+          </div>
+          <div class="friendInf">
+            <span class="friendName">Dodick Dodicovitch</span>
+            <div class="state"></div>
+            <br>
+            <span class="status">'mestniy doda'</span>
+            <br>
+            <div class="friendState">School friend</div>
+            <br>
+          </div>
+          <button class="sendMessage" onclick="openChat()">Send message</button>
+        </div>
 
       </article>
+
     </div>
 
-<!-- comments for right side -->
+    <!-- messages -->
+
+    <div id='chatWindow'>
+      <div class="frame">
+        <div class="showMessages">
+
+        </div>
+        <div class="typeMessage">
+          <div class="myPhoto friendPhoto">
+            <img src='img/o12S9j9oevs.png'>
+          </div>
+          <form>
+            <textarea></textarea>
+            <button class="sendMessage">Send</button>
+          </form>
+          <div class="friendPhoto">
+            <img src='img/hulk.jpg'>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- photos -->
+
+    <div id='myPhoto'>
+      <div class="photoContainer">
+        <div class="photo">
+          <img src="img/566.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/hulk.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/maxx.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/nau.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/566.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/566.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/o12S9j9oevs.png">
+        </div>
+        <div class="photo">
+          <img src="img/566.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/566.jpg">
+        </div>
+        <div class="photo">
+          <img src="img/o12S9j9oevs.png">
+        </div>
+      </div>
+    </div>
+
+    <!-- comments for right side -->
 
     <div id='rightSideComents'>
       <div class="friendComment">
@@ -267,6 +394,15 @@
         </div>
       </div>
 
+    </div>
+
+    <div id="modalWindow">
+      <div>
+        <div id="imgContainer"></div>
+        <div class="close" onclick="closeModal()">
+          <i class="fa fa-times"></i>
+        </div>
+      </div>
     </div>
 
   </div>

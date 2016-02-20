@@ -1,9 +1,37 @@
 window.onload = function() {
-  location.hash = 'myPage';
-  loadPage();
+  if (location.hash == ''){
+    location.hash = 'myPage';
+    loadPage();
+  }
+  else{
+    loadPage();
+  }
 };
 
 window.onhashchange = loadPage;
+
+function editImgs() {
+  var imgs = document.getElementsByTagName('img');
+  for (var i = 0; i < imgs.length; i++) {
+    imgs[i].setAttribute('onclick', 'openModal(this)');
+  }
+}
+
+function openModal(img) {
+  var imgContainer = document.getElementById('imgContainer');
+  imgContainer.innerHTML = '';
+  modalWindow.style.display = 'block';
+  var localImg = img.cloneNode(true);
+  imgContainer.appendChild(localImg);
+}
+
+function closeModal() {
+  modalWindow.style.display = 'none';
+}
+
+function openChat() {
+  location.hash = 'chatWindow';
+}
 
 
 function loadPage() {
@@ -15,6 +43,9 @@ function loadPage() {
     document.getElementById('wrapper').innerHTML = '';
   }
     getFriendsNews();
+    var modalWindow = document.getElementById('modalWindow');
+    document.body.appendChild(modalWindow);
+    editImgs();
 }
 
 function makeActive(li) {
