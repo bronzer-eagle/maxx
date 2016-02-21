@@ -496,6 +496,11 @@ a {
   height: 250px;
   margin: 5px auto;
   border: 1px solid rgb(201, 201, 201);
+  overflow-y: scroll;
+}
+
+.showMessages::-webkit-scrollbar{
+  width: 0;
 }
 
 .typeMessage{
@@ -526,6 +531,45 @@ a {
   left: 50%;
   margin-left: -75px;
   bottom: -40px;
+}
+
+.miniMessage{
+  width: 95%;
+  height: 60px;
+  margin: 5px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(149, 149, 149);
+}
+
+.miniMessage .friendPhoto{
+  width: 40px;
+  height: 40px;
+  float: none;
+  margin: 0;
+}
+
+.photoDate{
+  width: 60px;
+  height: 50px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.date{
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+
+.minMessage{
+  width: 100px;
+  display: block;
+  height: auto;
+  margin: 0 20px;
 }
 
 /*photos*/
