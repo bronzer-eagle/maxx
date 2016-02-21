@@ -574,7 +574,7 @@ a {
   z-index: 1000;
   display: none;
   background: rgba(94, 130, 163, .4);
-  position: absolute;
+  position: fixed;
 }
 
 #modalWindow>div{
@@ -601,4 +601,83 @@ a {
   position: absolute;
   top: 5px;
   right: -20px;
+}
+
+
+/*-=-=-===--=-=-configuration=--=-=-=-=-=-=-==-=*/
+
+#myPageConfig{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+#myPageConfig>div{
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+#myPageConfig input{
+  margin: 5px;
+  display: block;
+}
+
+#myPageConfig label{
+  display: block;
+  margin: 8px 0 0 0;
+}
+
+#myPageConfig button.sendMessage{
+  bottom: -40px;
+  left: 50%;
+  margin-left: -50px;
+}
+
+
+/* messages*/
+
+
+.message{
+  width: 90%;
+  height: 100px;
+  border: 3px solid rgb(39, 33, 92);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: background 1s ease;
+  position: relative;
+}
+
+.message:hover{
+  background: rgb(156, 183, 228);
+}
+
+.photoFriend{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px;
+  float: left;
+}
+
+.photoFriend img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.textMessage{
+  display: block;
+  margin-top: 15px;
+}
+
+.message .state{
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  width: 25px;
+  height: 25px;
 }
