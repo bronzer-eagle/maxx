@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cupcake</title>
+  <link href="../img/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="css/style.css" rel="stylesheet">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- leftside menu -->
+  <div class="left-side">
+    <ul>
+      <li id="myPage">
+        <a href="#myPage">My page</a>
+      </li>
+      <li id="myFriends">
+        <a href="#myFriends">My friends</a>
+      </li>
+      <li id="myMessages">
+        <a href="#myMessages">My messages</a>
+      </li>
+      <li id="myPhoto">
+        <a href="#myPhoto">My photos</a>
+      </li>
+      <li id="myMusic">
+        <a href="#">My music</a>
+      </li>
+      <li id="myVideo">
+        <a href="#">My videos</a>
+      </li>
+      <li id="configuration">
+        <a href="#configuration">Configuration</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Main container for the inf -->
+  <div id="wrapper"></div>
+  <!-- News container -->
+  <div id='rightSide'></div>
+
+  <!-- templates -->
+  <div id='templates'>
+
+    <div id='rightSideComents'>
+
+      <div class="friendComment">
+        <div class="showComment">
+          <div class='commentPhoto'>
+            <img src="img/o12S9j9oevs.png" class='userImg'>
+          </div>
+          <span class='commentSpan'>Nowadays I study at NAU</span>
+          <div class="addImg">
+            <img class='imgComment' src="img/nau.jpg">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="modalWindow">
+      <div>
+        <div id="imgContainer"></div>
+        <div class="close" onclick="closeModal()">
+          <i class="fa fa-times"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
